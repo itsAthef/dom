@@ -1,23 +1,11 @@
-let btn = document.querySelector("button");
+let h3 = document.querySelector("h3");
 
-btn.addEventListener("click", function () {
-  let h3 = document.querySelector("h3");
-  let randomColor = genColor;
-  h3.innertext = randomColor;
-
-  let div = document.querySelector("div");
-  div.style.backgroundColor = randomColor;
-
-  console.log(`color updated ! ${randomColor}`);
+h3.addEventListener("click", function () {
+  console.log("i was clciked hehe");
 });
 
-function genColor() {
-  let red = Math.floor(Math.random() * 255);
-  let green = Math.floor(Math.random() * 255);
-  let blue = Math.floor(Math.random() * 255);
+let box = document.querySelector(".box");
 
-  let color = `rgb(${red},${green},${blue})`;
-  return color;
-}
-
-genColor();
+box.addEventListener("mouseenter", function () {
+  console.log("You enter box");
+});
