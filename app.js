@@ -1,14 +1,10 @@
-let inp = document.querySelector("input");
+let form = document.querySelector("form");
 
-inp.addEventListener("keydown", function (event) {
-  console.log(event.code);
-  if (event.code === "ArrowUp") {
-    console.log("Character Moves Forward");
-  } else if (event.code === "ArrowDown") {
-    console.log("Character Moves Backward");
-  } else if (event.code === "ArrowLeft") {
-    console.log("Character Moves Left");
-  } else if (event.code === "ArrowRight") {
-    console.log("Character Moves Right");
-  }
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let user = this.elements[0];
+  let pass = this.elements[1];
+
+  alert(`Hi ${user.value}, Your Password is set to ${pass.value}!`);
 });
