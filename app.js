@@ -1,18 +1,11 @@
-let div = document.querySelector("div");
-let ul = document.querySelector("ul");
-let lis = document.querySelectorAll("li");
+let btn = document.createElement("button");
 
-div.addEventListener("click", function (event) {
-  event.stopPropagation;
-  console.log("Div was clkicked !");
-});
+let body = document.querySelector("body");
 
-ul.addEventListener("click", function (event) {
-  event.stopPropagation;
-  console.log("ul was clkicked !");
-});
+body.append(btn);
 
-lis.addEventListener("click", function (event) {
-  event.stopPropagation;
-  console.log("li was clkicked !");
+btn.innerText = "Click me";
+
+btn.addEventListener("click", function () {
+  btn.style.color = "green";
 });
