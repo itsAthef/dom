@@ -3,6 +3,15 @@ div {
     height: 100px;
     width: 500px;
     margin: auto;
+    background-color: blueviolet;
+}
+
+ul {
+    background-color: aqua;
+}
+
+li {
+    background-color: green;
 }
 
 body {

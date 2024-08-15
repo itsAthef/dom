@@ -1,10 +1,18 @@
-let form = document.querySelector("form");
+let div = document.querySelector("div");
+let ul = document.querySelector("ul");
+let lis = document.querySelectorAll("li");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+div.addEventListener("click", function (event) {
+  event.stopPropagation;
+  console.log("Div was clkicked !");
+});
 
-  let user = this.elements[0];
-  let pass = this.elements[1];
+ul.addEventListener("click", function (event) {
+  event.stopPropagation;
+  console.log("ul was clkicked !");
+});
 
-  alert(`Hi ${user.value}, Your Password is set to ${pass.value}!`);
+lis.addEventListener("click", function (event) {
+  event.stopPropagation;
+  console.log("li was clkicked !");
 });
